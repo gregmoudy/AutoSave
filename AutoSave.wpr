@@ -1,0 +1,9 @@
+#!wing
+#!version=6.0
+##################################################################
+# Wing IDE project file                                          #
+##################################################################
+[project attributes]
+proj.file-list = [loc('auto_save.py'),
+                  loc('demo.py')]
+proj.file-type = 'shared'
