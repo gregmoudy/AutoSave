@@ -14,3 +14,4 @@ proj.directory-list = [{'dirloc': loc('.'),
 proj.file-list = [loc('auto_save.py'),
                   loc('demo.py')]
 proj.file-type = 'shared'
+proj.main-file = loc('demo.py')
