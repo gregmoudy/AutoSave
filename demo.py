@@ -1,4 +1,4 @@
-""" Demo application of the auto save process. """
+""" Demo application of the auto save module. """
 
 import auto_save
 
