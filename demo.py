@@ -9,7 +9,7 @@ class DemoFrame( wx.Frame ):
 	def __init__( self, *args, **kwargs ):
 		super( ).__init__( *args, **kwargs )
 
-		self._auto_saver = auto_save.AutoSaver( save_func = test_save_func )
+		self._auto_saver = auto_save.AutoSaver( test_save_func )
 		self._auto_saver.start( )
 
 		self.Bind( wx.EVT_CLOSE, self.on_close )
