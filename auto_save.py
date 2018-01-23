@@ -20,10 +20,6 @@ class AutoSaver( wx.Timer ):
 		# Save function to be called at the end of auto saver timer. Save function should take a single argument of the full file path to save to.
 		self._save_func = save_func
 
-		# Create the directory for the auto save files if it does not already exist.
-		if not os.path.exists( DIR_AUTO_SAVE ):
-			os.mkdir( DIR_AUTO_SAVE )
-
 
 	def start( self ):
 		self.Start( AUTO_SAVE_INTERVAL )
@@ -65,6 +61,10 @@ class AutoSaver( wx.Timer ):
 		full_local_filename = self.get_auto_save_file( )
 
 		print( '{0} - {1}'.format( time.ctime( ), full_local_filename ) )
+
+		# Create the directory for the auto save files if it does not already exist.
+		if not os.path.exists( DIR_AUTO_SAVE ):
+			os.makedirs( DIR_AUTO_SAVE )
 
 		# If the auto save file already exists, remove it before saving.
 		# This makes sure that the filename case is updated to what we are currently trying to save it to.
